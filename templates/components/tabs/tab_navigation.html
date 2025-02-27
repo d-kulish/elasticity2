@@ -1,0 +1,14 @@
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+    {% for tab in tabs %}
+    <li class="nav-item" role="presentation">
+        <button class="nav-link {% if forloop.first %}active{% endif %}" 
+                id="{{ tab.id }}-tab" 
+                data-bs-toggle="tab" 
+                data-bs-target="#{{ tab.id }}" 
+                type="button" 
+                role="tab">
+            {{ tab.title }}
+        </button>
+    </li>
+    {% endfor %}
+</ul>
